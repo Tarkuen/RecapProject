@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Kursus {
 
-    private String navn;
-    private String nummer;
+    private String navn ="";
+    private String nummer="";
 
     private List<Studerende> studerendeList;
     private List<Eksamen> eksamensOpgaver;
@@ -60,4 +60,15 @@ public class Kursus {
         return nummer;
     }
 
+
+    @Override
+    public String toString() {
+        return "Kursus{" +
+                "navn='" + navn + '\'' +
+                ", nummer='" + nummer + '\'' +
+                ", studerendeList=" + studerendeList +
+                ", eksamensOpgaver=" + eksamensOpgaver +
+                ", undervisere=" + undervisere +
+                '}';
+    }
 }

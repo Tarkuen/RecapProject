@@ -7,18 +7,15 @@ import java.util.List;
 
 public class KursusListe {
 
- private List<Kursus> kursusList;
+    private List<Kursus> kursusList;
+    private static final KursusListe instance = new KursusListe();
 
     private KursusListe(){
         kursusList = new ArrayList<>();
     }
 
-    private static class KursusListeSingleton{
-    private static final KursusListe instance = new KursusListe();
-    }
-
     public static KursusListe getInstance(){
-     return KursusListeSingleton.instance;
+     return instance;
     }
 
     public List<Kursus> getKursusList() {
